@@ -69,11 +69,11 @@ gtest_main.a : gtest-all.o gtest_main.o
 # gtest_main.a, depending on whether it defines its own main()
 # function.
 
-10035.o : $(USER_DIR)/10035.cc $(GTEST_HEADERS)
+10035.o : $(USER_DIR)/10035.cc $(USER_DIR)/10035.h $(GTEST_HEADERS)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/10035.cc
 
 10035_unittest.o : $(USER_DIR)/10035_unittest.cc \
-                     $(USER_DIR)/10035.cc $(GTEST_HEADERS)
+                     $(USER_DIR)/10035.h $(GTEST_HEADERS)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/10035_unittest.cc
 
 10035_unittest : 10035.o 10035_unittest.o gtest_main.a
