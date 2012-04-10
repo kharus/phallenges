@@ -62,3 +62,10 @@ TEST(TotalCarriesTest, A555) {
   EXPECT_EQ(3, number_of_carries(555, 555));
 }
 
+TEST(PadVectorTest, Pad3to6) {
+  std::vector<int> fixture = {1, 2, 3};
+  std::vector<int> expected = {1, 2, 3, 0, 0};
+  pad_vector(fixture, 5);
+  EXPECT_EQ(expected, fixture);
+}
+
