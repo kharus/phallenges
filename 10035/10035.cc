@@ -71,6 +71,7 @@ string result_message(int number_of_carries){
   }
 }
 
+#ifdef ONLINE_JUDGE
 int main(){
   int x,y;
   vector<string> results;
@@ -87,4 +88,4 @@ int main(){
     cout<<results[i]<<endl;
   }
 }
-    
+#endif
