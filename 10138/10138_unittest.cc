@@ -27,23 +27,23 @@ TEST(CompareTest, Zero) {
 TEST(Fib, Ten){
   std::vector< std::vector<int> > fibs = fib_table(15);
   std::vector<int> fifty_five = {5,5};
-  EXPECT_EQ(fifty_five, fibs[10]);
+  EXPECT_EQ(fifty_five, fibs[8]);
 }
 
 TEST(FindBelow, Ten){
   std::vector< std::vector<int> > fibs = fib_table(15);
   std::vector<int> fifty_three = {3,5};
   std::vector<int> fifty_five = {5,5};
-  EXPECT_EQ(9, find_below_index(fibs, fifty_three));
-  EXPECT_EQ(10, find_below_index(fibs, fifty_five));
+  EXPECT_EQ(7, find_below_index(fibs, fifty_three));
+  EXPECT_EQ(8, find_below_index(fibs, fifty_five));
 }
 
 TEST(FindAbove, Ten){
   std::vector< std::vector<int> > fibs = fib_table(15);
   std::vector<int> fifty_eight = {8,5};
   std::vector<int> fifty_five = {5,5};
-  EXPECT_EQ(11, find_above_index(fibs, fifty_eight));
-  EXPECT_EQ(10, find_above_index(fibs, fifty_five));
+  EXPECT_EQ(9, find_above_index(fibs, fifty_eight));
+  EXPECT_EQ(8, find_above_index(fibs, fifty_five));
 }
 
 TEST(FindNumbers, Ten){

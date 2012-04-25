@@ -80,12 +80,12 @@ int comp(const vector<int>& x, const vector<int>& y){
 typedef vector< vector<int> > fib_seq;
 
 fib_seq fib_table(int max){
-  vector<int> zero(1,0);
   vector<int> one(1,1);
+  vector<int> two(1,2);
   vector< vector<int> > result;
 
-  result.push_back(zero);
   result.push_back(one);
+  result.push_back(two);
 
   for(int i = 2; i <= max; i++){
     result.push_back(
